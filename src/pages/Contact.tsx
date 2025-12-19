@@ -1,8 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Clock, MapPin, Phone, Send } from "lucide-react";
+import { useState } from "react";
 
 const contactInfo = [
 	{

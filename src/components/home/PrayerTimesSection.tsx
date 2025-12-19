@@ -1,23 +1,21 @@
-import { useState } from "react";
-import {
-	Clock,
-	Sun,
-	Sunrise,
-	Sunset,
-	Moon,
-	ChevronLeft,
-	ChevronRight,
-	Calendar,
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatHijriDate, getArabicHijriDate } from "@/lib/hijri";
 import {
-	format,
 	addDays,
-	subDays,
-	startOfDay,
 	differenceInDays,
+	format,
+	startOfDay,
+	subDays,
 } from "date-fns";
+import {
+	Calendar,
+	ChevronLeft,
+	ChevronRight,
+	Clock,
+	Sun,
+	Sunset
+} from "lucide-react";
+import { useState } from "react";
 
 // Sample prayer times for the week (in a real app, these would come from an API)
 const weeklyPrayerTimes: Record<

@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 import {
-	MapPin,
-	Phone,
-	Mail,
 	Clock,
 	Facebook,
-	Youtube,
 	Instagram,
+	MapPin,
+	Phone,
+	Youtube
 } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 
 export function Footer() {
 	return (

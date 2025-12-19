@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Heart, Building, BookOpen, Users } from "lucide-react";
-import type { JSX } from "react";
+import { Heart } from "lucide-react";
 
 // const causes = [
 // 	{
