@@ -22,7 +22,7 @@ export function Header() {
 			<nav className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
 				{/* Logo */}
 				<Link to="/" className="flex items-center gap-3">
-					<img src={logo} alt="logo" className="w-15 h-15" />
+					<img src={logo} alt="logo" className="w-15/ h-15 object-contain" />
 					{/* <div className="w-10 h-10 rounded-full bg-gradient-hero flex items-center justify-center">
 						<span className="text-primary-foreground font-serif font-bold text-lg">
 							M
@@ -59,7 +59,7 @@ export function Header() {
 						href="tel:+1234567890"
 						className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
 						<Phone className="w-4 h-4" />
-						<span>(123) 456-7890</span>
+						<span>+1 (847) 867-4349</span>
 					</a>
 					<Link to="/donate">
 						<Button variant="gold" size="sm">

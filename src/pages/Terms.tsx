@@ -176,12 +176,11 @@ export default function Terms() {
 									us at:
 								</p>
 								<p className="mt-3">
-									<strong>Email:</strong> info@masjidalnooor.org
+									{/* <strong>Email:</strong> info@masjidalnooor.org */}
 									<br />
-									<strong>Phone:</strong> (123) 456-7890
+									<strong>Phone:</strong> +1 (847)867-4349
 									<br />
-									<strong>Address:</strong> 123 Islamic Center Drive, City,
-									State 12345
+									<strong>Address:</strong> 1000 Elm St, Glenview, IL 60025
 								</p>
 							</div>
 						</div>

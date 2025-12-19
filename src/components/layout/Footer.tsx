@@ -19,7 +19,11 @@ export function Footer() {
 					{/* About */}
 					<div>
 						<div className="flex items-center gap-3 mb-6">
-							<img src={logo} alt="logo" className="w-16 h-16" />
+							<img
+								src={logo}
+								alt="logo"
+								className="w-16/ h-16 object-contain"
+							/>
 							{/* <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
 								<span className="text-primary-foreground font-serif font-bold text-lg">
 									M
@@ -88,23 +92,21 @@ export function Footer() {
 							<li className="flex gap-3">
 								<MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" />
 								<span className="text-sm text-primary-foreground/80">
-									123 Islamic Center Drive
-									<br />
-									City, State 12345
+									1000 Elm St, Glenview, IL 60025
 								</span>
 							</li>
 							<li className="flex gap-3">
 								<Phone className="w-5 h-5 text-gold shrink-0" />
 								<span className="text-sm text-primary-foreground/80">
-									(123) 456-7890
+									+1 (847) 867-4349
 								</span>
 							</li>
-							<li className="flex gap-3">
+							{/* <li className="flex gap-3">
 								<Mail className="w-5 h-5 text-gold shrink-0" />
 								<span className="text-sm text-primary-foreground/80">
 									info@masjidalnooor.org
 								</span>
-							</li>
+							</li> */}
 							<li className="flex gap-3">
 								<Clock className="w-5 h-5 text-gold shrink-0" />
 								<span className="text-sm text-primary-foreground/80">
@@ -142,8 +144,7 @@ export function Footer() {
 				<div className="container mx-auto px-4 py-6">
 					<div className="flex flex-col md:flex-row justify-between items-center gap-4">
 						<p className="text-sm text-primary-foreground/60">
-							© {new Date().getFullYear()} Glenbrook. All
-							rights reserved.
+							&copy; {new Date().getFullYear()} Glenbrook. All rights reserved.
 						</p>
 						<div className="flex gap-6">
 							<Link

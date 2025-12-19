@@ -56,23 +56,7 @@ export function HeroSection() {
 						</Button>
 					</div>
 
-					{/* Stats */}
-					<div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/20 animate-fade-up animation-delay-400">
-						{[
-							{ value: "25+", label: "Years Serving" },
-							{ value: "5000+", label: "Community Members" },
-							{ value: "50+", label: "Weekly Programs" },
-						].map((stat) => (
-							<div key={stat.label}>
-								<div className="font-serif text-3xl md:text-4xl font-bold text-gold">
-									{stat.value}
-								</div>
-								<div className="text-sm text-primary-foreground/70 mt-1">
-									{stat.label}
-								</div>
-							</div>
-						))}
-					</div>
+				
 				</div>
 			</div>
 		</section>

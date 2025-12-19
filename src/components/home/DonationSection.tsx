@@ -1,26 +1,36 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Building, BookOpen, Users } from "lucide-react";
+import type { JSX } from "react";
 
-const causes = [
-	{
-		icon: Building,
-		label: "Masjid Maintenance",
-		amount: "$15,000",
-		goal: "$25,000",
-	},
-	{
-		icon: BookOpen,
-		label: "Education Programs",
-		amount: "$8,500",
-		goal: "$15,000",
-	},
-	{
-		icon: Users,
-		label: "Community Services",
-		amount: "$12,000",
-		goal: "$20,000",
-	},
-];
+// const causes = [
+// 	{
+// 		icon: Building,
+// 		label: "Masjid Maintenance",
+// 		amount: "$15,000",
+// 		goal: "$25,000",
+// 	},
+// 	{
+// 		icon: BookOpen,
+// 		label: "Education Programs",
+// 		amount: "$8,500",
+// 		goal: "$15,000",
+// 	},
+// 	{
+// 		icon: Users,
+// 		label: "Community Services",
+// 		amount: "$12,000",
+// 		goal: "$20,000",
+// 	},
+// ];
+
+interface CausesTypes {
+	icon: any;
+	label: String;
+	amount: String;
+	goal: String;
+}
+
+const causes: CausesTypes[] = [];
 
 export function DonationSection() {
 	return (
@@ -71,7 +81,7 @@ export function DonationSection() {
 
 					{/* Donation Progress Cards */}
 					<div className="space-y-4">
-						{causes.map((cause) => {
+						{causes.map((cause, idx) => {
 							const Icon = cause.icon;
 							const raised = parseInt(cause.amount.replace(/\D/g, ""));
 							const goal = parseInt(cause.goal.replace(/\D/g, ""));
@@ -79,7 +89,7 @@ export function DonationSection() {
 
 							return (
 								<div
-									key={cause.label}
+									key={idx}
 									className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-primary-foreground/20">
 									<div className="flex items-center gap-4 mb-4">
 										<div className="w-12 h-12 rounded-lg bg-gold flex items-center justify-center">

@@ -8,18 +8,18 @@ const contactInfo = [
 	{
 		icon: MapPin,
 		title: "Address",
-		content: "123 Islamic Center Drive\nCity, State 12345",
+		content: "1000 Elm St, Glenview, IL 60025",
 	},
 	{
 		icon: Phone,
 		title: "Phone",
-		content: "(123) 456-7890",
+		content: "+1 (847)867-4349",
 	},
-	{
-		icon: Mail,
-		title: "Email",
-		content: "info@masjidalnooor.org",
-	},
+	// {
+	// 	icon: Mail,
+	// 	title: "Email",
+	// 	content: "info@masjidalnooor.org",
+	// },
 	{
 		icon: Clock,
 		title: "Hours",
@@ -97,13 +97,13 @@ export default function Contact() {
 							</div>
 
 							{/* Map Placeholder */}
-							<div className="bg-secondary rounded-2xl h-64 flex items-center justify-center border border-border">
+							{/* <div className="bg-secondary rounded-2xl h-64 flex items-center justify-center border border-border">
 								<div className="text-center text-muted-foreground">
 									<MapPin className="w-12 h-12 mx-auto mb-2 opacity-50" />
 									<p>Interactive Map</p>
 									<p className="text-sm">123 Islamic Center Drive</p>
 								</div>
-							</div>
+							</div> */}
 						</div>
 
 						{/* Contact Form */}
@@ -158,7 +158,7 @@ export default function Contact() {
 												setFormData({ ...formData, phone: e.target.value })
 											}
 											className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-											placeholder="(123) 456-7890"
+											placeholder="+1 (847)867-4349"
 										/>
 									</div>
 									<div>

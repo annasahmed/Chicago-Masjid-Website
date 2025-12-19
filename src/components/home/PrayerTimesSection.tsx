@@ -22,7 +22,7 @@ import {
 // Sample prayer times for the week (in a real app, these would come from an API)
 const weeklyPrayerTimes: Record<
 	string,
-	{ name: string; time: string; iqama: string; icon: typeof Sun }[]
+	{ name: string; time: string; iqama?: string; icon: typeof Sun }[]
 > = {};
 
 // Generate prayer times for 7 days (sample data - times would vary in reality)
@@ -30,37 +30,42 @@ for (let i = 0; i < 7; i++) {
 	const date = addDays(startOfDay(new Date()), i);
 	const dateKey = format(date, "yyyy-MM-dd");
 	weeklyPrayerTimes[dateKey] = [
+		// {
+		// 	name: "Fajr",
+		// 	time: `${5 + Math.floor(i / 3)}:${45 - i * 2} AM`,
+		// 	iqama: `${6 + Math.floor(i / 3)}:00 AM`,
+		// 	icon: Sunrise,
+		// },
+		// {
+		// 	name: "Sunrise",
+		// 	time: `${7 + Math.floor(i / 4)}:${15 + i} AM`,
+		// 	iqama: "-",
+		// 	icon: Sun,
+		// },
 		{
-			name: "Fajr",
-			time: `${5 + Math.floor(i / 3)}:${45 - i * 2} AM`,
-			iqama: `${6 + Math.floor(i / 3)}:00 AM`,
-			icon: Sunrise,
-		},
-		{
-			name: "Sunrise",
-			time: `${7 + Math.floor(i / 4)}:${15 + i} AM`,
-			iqama: "-",
+			name: "Zuhr",
+			time: "12:30 PM",
+			//  iqama: "1:00 PM",
 			icon: Sun,
 		},
-		{ name: "Dhuhr", time: "12:30 PM", iqama: "1:00 PM", icon: Sun },
 		{
 			name: "Asr",
 			time: `${3 + Math.floor(i / 5)}:${45 - i} PM`,
-			iqama: `${4 + Math.floor(i / 5)}:00 PM`,
+			// iqama: `${4 + Math.floor(i / 5)}:00 PM`,
 			icon: Sun,
 		},
 		{
 			name: "Maghrib",
 			time: `${5 + Math.floor(i / 3)}:${30 + i * 2} PM`,
-			iqama: `${5 + Math.floor(i / 3)}:${35 + i * 2} PM`,
+			// iqama: `${5 + Math.floor(i / 3)}:${35 + i * 2} PM`,
 			icon: Sunset,
 		},
-		{
-			name: "Isha",
-			time: `${7 + Math.floor(i / 4)}:${i * 3} PM`,
-			iqama: `${7 + Math.floor(i / 4)}:30 PM`,
-			icon: Moon,
-		},
+		// {
+		// 	name: "Isha",
+		// 	time: `${7 + Math.floor(i / 4)}:${i * 3} PM`,
+		// 	iqama: `${7 + Math.floor(i / 4)}:30 PM`,
+		// 	icon: Moon,
+		// },
 	];
 }
 
@@ -195,7 +200,7 @@ export function PrayerTimesSection() {
 				</div>
 
 				{/* Prayer Times Grid */}
-				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6/ gap-4">
 					{prayerTimes.map((prayer) => {
 						const Icon = prayer.icon;
 						return (
@@ -213,11 +218,11 @@ export function PrayerTimesSection() {
 								<p className="text-2xl font-bold text-primary text-center mb-1">
 									{prayer.time}
 								</p>
-								{prayer.iqama !== "-" && (
+								{/* {prayer.iqama !== "-" && (
 									<p className="text-xs text-muted-foreground text-center">
 										Iqama: {prayer.iqama}
 									</p>
-								)}
+								)} */}
 							</div>
 						);
 					})}
