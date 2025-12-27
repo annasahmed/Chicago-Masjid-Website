@@ -12,15 +12,23 @@ import {
 	ChevronLeft,
 	ChevronRight,
 	Clock,
+	Moon,
 	Sun,
-	Sunset
+	Sunrise,
+	Sunset,
 } from "lucide-react";
 import { useState } from "react";
 
 // Sample prayer times for the week (in a real app, these would come from an API)
 const weeklyPrayerTimes: Record<
 	string,
-	{ name: string; time: string; iqama?: string; icon: typeof Sun }[]
+	{
+		name: string;
+		time: string;
+		iqama?: string;
+		khateeb?: string;
+		icon: typeof Sun;
+	}[]
 > = {};
 
 // Generate prayer times for 7 days (sample data - times would vary in reality)
@@ -28,12 +36,12 @@ for (let i = 0; i < 7; i++) {
 	const date = addDays(startOfDay(new Date()), i);
 	const dateKey = format(date, "yyyy-MM-dd");
 	weeklyPrayerTimes[dateKey] = [
-		// {
-		// 	name: "Fajr",
-		// 	time: `${5 + Math.floor(i / 3)}:${45 - i * 2} AM`,
-		// 	iqama: `${6 + Math.floor(i / 3)}:00 AM`,
-		// 	icon: Sunrise,
-		// },
+		{
+			name: "Fajr",
+			time: `${5 + Math.floor(i / 3)}:${45 - i * 2} AM`,
+			iqama: `${6 + Math.floor(i / 3)}:00 AM`,
+			icon: Sunrise,
+		},
 		// {
 		// 	name: "Sunrise",
 		// 	time: `${7 + Math.floor(i / 4)}:${15 + i} AM`,
@@ -58,12 +66,19 @@ for (let i = 0; i < 7; i++) {
 			// iqama: `${5 + Math.floor(i / 3)}:${35 + i * 2} PM`,
 			icon: Sunset,
 		},
-		// {
-		// 	name: "Isha",
-		// 	time: `${7 + Math.floor(i / 4)}:${i * 3} PM`,
-		// 	iqama: `${7 + Math.floor(i / 4)}:30 PM`,
-		// 	icon: Moon,
-		// },
+		{
+			name: "Isha",
+			time: `${7 + Math.floor(i / 4)}:${i * 3} PM`,
+			iqama: `${7 + Math.floor(i / 4)}:30 PM`,
+			icon: Moon,
+		},
+		{
+			name: "Jumma",
+			time: "1:30 PM",
+			iqama: "1:40 PM",
+			khateeb: "Allama Khateeb",
+			icon: Sun,
+		},
 	];
 }
 
@@ -198,7 +213,7 @@ export function PrayerTimesSection() {
 				</div>
 
 				{/* Prayer Times Grid */}
-				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6/ gap-4">
+				<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
 					{prayerTimes.map((prayer) => {
 						const Icon = prayer.icon;
 						return (
@@ -216,18 +231,23 @@ export function PrayerTimesSection() {
 								<p className="text-2xl font-bold text-primary text-center mb-1">
 									{prayer.time}
 								</p>
-								{/* {prayer.iqama !== "-" && (
+								{prayer.iqama && prayer.iqama !== "-" && (
 									<p className="text-xs text-muted-foreground text-center">
 										Iqama: {prayer.iqama}
 									</p>
-								)} */}
+								)}
+								{prayer.khateeb && (
+									<p className="text-xs text-muted-foreground text-center">
+										Khateeb: {prayer.khateeb}
+									</p>
+								)}
 							</div>
 						);
 					})}
 				</div>
 
 				{/* Jummah Notice */}
-				<div className="mt-8 bg-gold/10 border border-gold/30 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+				{/* <div className="mt-8 bg-gold/10 border border-gold/30 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
 					<div className="flex items-center gap-4">
 						<div className="w-12 h-12 rounded-full bg-gold flex items-center justify-center">
 							<span className="text-accent-foreground font-serif font-bold text-xl">
@@ -245,7 +265,7 @@ export function PrayerTimesSection() {
 						<p className="text-sm text-muted-foreground">Khutbah: 1:00 PM</p>
 						<p className="text-lg font-bold text-primary">Prayer: 1:30 PM</p>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);

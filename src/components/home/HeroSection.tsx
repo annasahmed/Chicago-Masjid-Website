@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
+import headerImage from "@/assets/header-img.png";
 
 export function HeroSection() {
 	return (
@@ -13,8 +14,8 @@ export function HeroSection() {
 			<div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-gold/10 blur-3xl" />
 			<div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-primary-foreground/5 blur-3xl" />
 
-			<div className="container mx-auto px-4 relative z-10">
-				<div className="max-w-3xl">
+			<div className="container mx-auto px-4 relative z-10 flex gap-10 pt-15 max-md:flex-col">
+				<div className="flex-1">
 					{/* Badge */}
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-up">
 						<span className="w-2 h-2 rounded-full bg-gold animate-pulse-soft" />
@@ -39,10 +40,7 @@ export function HeroSection() {
 
 					{/* CTAs */}
 					<div className="flex flex-col sm:flex-row gap-4 animate-fade-up animation-delay-300">
-						<Button
-							variant="hero"
-							size="xl"
-							asChild>
+						<Button variant="hero" size="xl" asChild>
 							<Link to="/about">
 								Learn About Us
 								<ArrowRight className="w-5 h-5" />
@@ -55,8 +53,9 @@ export function HeroSection() {
 							</Link>
 						</Button>
 					</div>
-
-				
+				</div>
+				<div className="flex-1 pb-15">
+					<img src={headerImage} className="mx-auto w-[70%]/ max-md:w-[80%] h-auto object-contain" alt="header-img" />
 				</div>
 			</div>
 		</section>

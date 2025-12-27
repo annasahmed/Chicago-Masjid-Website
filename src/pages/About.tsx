@@ -75,22 +75,26 @@ export default function About() {
 								Building Faith, Strengthening Humanity
 							</h2>
 							<div className="space-y-4 text-muted-foreground leading-relaxed">
+								<p>In the name of Allah, the Most Merciful, the Most Kind.</p>
 								<p>
-									Glenbrook began as a vision shared by a
-									small group of Muslim families in 1999. What started as Friday
-									prayers in a rented community hall has grown into a thriving
-									center serving thousands of families.
+									Glenbrook Islamic Centre was founded in 2025 with the sincere
+									intention of creating a peaceful place of worship and
+									community in Glenview, Illinois. Located at 1000 Elm St,
+									Glenview, IL 60025, the centre began as a shared vision to
+									provide a welcoming space for prayer, reflection, and
+									connection.
 								</p>
 								<p>
-									Over the past 25 years, we have expanded our facilities,
-									programs, and outreach to become a comprehensive Islamic
-									center that addresses the spiritual, educational, and social
-									needs of our diverse community.
+									What started as a humble effort by community members has grown
+									into a place where faith is practiced with simplicity and
+									sincerity. Glenbrook Islamic Centre is more than a masjid. It
+									is a space where hearts find peace, neighbors build bonds, and
+									Islamic values are strengthened through togetherness.
 								</p>
 								<p>
-									Today, we continue to uphold our founding principles of
-									worship, education, and community service while adapting to
-									meet the evolving needs of our growing community.
+									With regular congregational prayers and the continued support
+									of the community, the centre continues to grow with faith at
+									its core.
 								</p>
 							</div>
 						</div>
@@ -139,12 +143,23 @@ export default function About() {
 							<h3 className="font-serif text-2xl font-bold text-foreground mb-4">
 								Our Vision
 							</h3>
-							<p className="text-muted-foreground leading-relaxed">
-								To be a leading Islamic center that inspires spiritual growth,
-								promotes Islamic knowledge, and serves as a model of community
-								excellence, fostering a generation of Muslims who contribute
-								positively to society.
-							</p>
+							<div className="space-y-4">
+								<p className="text-muted-foreground leading-relaxed">
+									Our vision is to build a strong, united Muslim community
+									rooted in faith, respect, and compassion.
+								</p>
+								<p className="text-muted-foreground leading-relaxed">
+									GLENBROOK aims to be a peaceful center where people come
+									closer to Allah while also feeling connected to one another.
+									We envision a space that encourages spiritual growth, mutual
+									understanding, and a sense of belonging for individuals and
+									families in Glenview and surrounding areas.
+								</p>
+								<p className="text-muted-foreground leading-relaxed">
+									Through consistency in prayer and community presence, we
+									strive to be a source of light, guidance, and unity.
+								</p>
+							</div>
 						</div>
 						<div className="bg-background rounded-2xl p-8 border border-border">
 							<div className="w-14 h-14 rounded-xl bg-gold flex items-center justify-center mb-6">
@@ -153,11 +168,23 @@ export default function About() {
 							<h3 className="font-serif text-2xl font-bold text-foreground mb-4">
 								Our Mission
 							</h3>
-							<p className="text-muted-foreground leading-relaxed">
-								To provide a welcoming environment for worship, education, and
-								community engagement, guided by the Quran and Sunnah, serving
-								Muslims and fostering understanding with the broader community.
-							</p>
+							<div className="space-y-4">
+								<p className="text-muted-foreground leading-relaxed">
+									Our mission is to provide a simple, welcoming place for daily
+									worship and community connection.
+								</p>
+								<p className="text-muted-foreground leading-relaxed">
+									GLENBROOK is committed to maintaining regular congregational
+									prayers, with Namaz Jamaat held two times daily for Fajar and
+									Isha. We focus on creating an environment that is calm,
+									respectful, and open to all who wish to pray and reflect.
+								</p>
+								<p className="text-muted-foreground leading-relaxed">
+									We aim to serve the local community with sincerity, keeping
+									faith at the center while fostering unity, support, and shared
+									responsibility.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
